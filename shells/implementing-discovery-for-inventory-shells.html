@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>CloudShell Developer Guide : Auto-discovery for Inventory Shells</title>
+        <meta name="description" content="">
+        <link rel="shortcut icon" type="image/png" href="/devguide/favicon.png?">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/devguide/css/main.css">
+        <link rel="stylesheet" href="/devguide/css/prism.css">
+        <link rel="stylesheet" href="/devguide/css/samples.css">
+        <link rel="stylesheet" href="/devguide/css/normalize.css">
+        <link rel="stylesheet" href="/devguide/css/test-hot-block.webflow.css">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script src="/devguide/js/jquery-3.1.0.min.js"></script>
+        <script src="/devguide/js/modernizr.js"></script>
+        <script src="/devguide/js/webflow.js"></script>
+
+
+        
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+    <div class="col-md-3 col-sm-4">
+        <a class="brand" href="/devguide/">
+            <img alt="CloudShell Logo" src="/devguide/assets/logo.png" />
+            CloudShell <small>Developer Guide</small>
+        </a>
+    </div>
+    <div class="col-md-9 col-sm-8">
+        <form class="search" action="/devguide/search.html">
+            <input class="input" id="search-query" type="text" name="q" placeholder="Search" />
+            <input class="button" type="submit" value="Search"></input>
+        </form>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                
+                
+                    <div id="navigation" class="col-md-3 col-sm-4">
+                        <ul class="nav nav-list">
+     
+     
+        <li class="nav-header"></li>
+        
+        
+        
+     
+        <li class="nav-header">Introduction</li>
+        
+                <li data-page-id="index.md"><a href="/devguide/">The CloudShell DevGuide</a></li>
+        
+        
+        
+                    <li data-page-id="_introduction/setting-up-the-development-ide.md" data-order="1"><a href="/devguide/introduction/setting-up-the-development-ide.html">Setting up the Development Environment</a></li>
+        
+     
+        <li class="nav-header">Extending cloudshell with shells</li>
+        
+        
+        
+                    <li data-page-id="_shells/getting-started.md" data-order="1"><a href="/devguide/shells/getting-started.html">Getting Started</a></li>
+        
+                    <li data-page-id="_shells/shell-driver-overview.md" data-order="2"><a href="/devguide/shells/shell-driver-overview.html">Shell Drivers Overview</a></li>
+        
+                    <li data-page-id="_shells/the-shell-project.md" data-order="3"><a href="/devguide/shells/the-shell-project.html">The Shell Project Guide</a></li>
+        
+                    <li data-page-id="_shells/modeling-the-shell.md" data-order="4"><a href="/devguide/shells/modeling-the-shell.html">Modeling Shells with TOSCA</a></li>
+        
+                    <li data-page-id="_shells/generating-shell-data-model.md" data-order="5"><a href="/devguide/shells/generating-shell-data-model.html">Managing the Shell’s Data Model</a></li>
+        
+                    <li data-page-id="_shells/getting-information-from-cloudshell.md" data-order="5"><a href="/devguide/shells/getting-information-from-cloudshell.html">Getting Information from CloudShell</a></li>
+        
+                    <li data-page-id="_shells/customizing-driver-commands.md" data-order="6"><a href="/devguide/shells/customizing-driver-commands.html">Commands Visibility and Usability</a></li>
+        
+                    <li data-page-id="_shells/driver-deep-dive.md" data-order="6"><a href="/devguide/shells/driver-deep-dive.html">Driver Deep Dive</a></li>
+        
+                    <li data-page-id="_shells/implementing-discovery-for-inventory-shells.md" data-order="7"><a href="/devguide/shells/implementing-discovery-for-inventory-shells.html">Auto-discovery for Inventory Shells</a></li>
+        
+                    <li data-page-id="_shells/discovering-inventory-snmp.md" data-order="8"><a href="/devguide/shells/discovering-inventory-snmp.html">Discovering Inventory using SNMP</a></li>
+        
+                    <li data-page-id="_shells/debugging-shell-commands.md" data-order="9"><a href="/devguide/shells/debugging-shell-commands.html">Debugging Shell Driver Commands</a></li>
+        
+                    <li data-page-id="_shells/deploying-to-production.md" data-order="11"><a href="/devguide/shells/deploying-to-production.html">Deploying to Production</a></li>
+        
+                    <li data-page-id="_shells/common-driver-recipes.md" data-order="12"><a href="/devguide/shells/common-driver-recipes.html">Common Driver Recipes</a></li>
+        
+                    <li data-page-id="_shells/migrating_1st_gen_shells.md" data-order="13"><a href="/devguide/shells/migrating_1st_gen_shells.html">Converting 1st Gen Shells into 2nd Gen Shells</a></li>
+        
+                    <li data-page-id="_shells/tips-and-tricks.md" data-order="13"><a href="/devguide/shells/tips-and-tricks.html">Tips and Tricks</a></li>
+        
+     
+        <li class="nav-header">Orchestration scripts</li>
+        
+        
+        
+                    <li data-page-id="_orchestration/getting-started.md" data-order="1"><a href="/devguide/orchestration/getting-started.html">Getting Started</a></li>
+        
+                    <li data-page-id="_orchestration/getting-information-from-cloudshell.md" data-order="2"><a href="/devguide/orchestration/getting-information-from-cloudshell.html">Getting Information from CloudShell</a></li>
+        
+                    <li data-page-id="_orchestration/script-commands-customization.md" data-order="6"><a href="/devguide/orchestration/script-commands-customization.html">Script commands Visibility and Usability</a></li>
+        
+                    <li data-page-id="_orchestration/scripts-deep-dive.md" data-order="6"><a href="/devguide/orchestration/scripts-deep-dive.html">Scripts Deep Dive</a></li>
+        
+                    <li data-page-id="_orchestration/common-orchestration-recipes.md" data-order="9"><a href="/devguide/orchestration/common-orchestration-recipes.html">Common Orchestration Script Recipes</a></li>
+        
+                    <li data-page-id="_orchestration/the-oob-orchestration.md" data-order="9"><a href="/devguide/orchestration/the-oob-orchestration.html">CloudShell's OOB Orchestration</a></li>
+        
+     
+        <li class="nav-header">Integrating cloudshell into the devops cycle</li>
+        
+        
+        
+                    <li data-page-id="_devops/devops-integration.md" data-order="1"><a href="/devguide/devops/devops-integration.html">Automating CloudShell Sandboxes for DevOps</a></li>
+        
+     
+        <li class="nav-header">Reference</li>
+        
+        
+        
+                    <li data-page-id="_reference/python-coding-standards.md" data-order="7"><a href="/devguide/reference/python-coding-standards.html">Python Coding Standards</a></li>
+        
+     
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-md-9 col-sm-8">
+                        
+
+<div class="page-header" data-page-id="_shells/implementing-discovery-for-inventory-shells.md">
+    <h2>Auto-discovery for Inventory Shells
+        
+        
+          <span style="float: right;font-size: 20px"><small><a href="https://github.com/QualiSystems/devguide_source/tree/master/_shells/implementing-discovery-for-inventory-shells.md">Suggest edits</a></small></span>
+        
+    </h2>
+</div>
+
+<p>Automated discovery makes it easy to import physical inventory devices into CloudShell by using automation to read their internal structure and attributes.</p>
+
+<h3 id="inventory-shells-in-cloudshell">Inventory Shells in CloudShell</h3>
+
+<p>Shells for physical devices are defined with a certain internal structure which can be found in their CloudShell Standard. For example, a basic physical resource can have Resource Port sub-resources, whereas a Switch can have blades and port channels according to the
+<a href="https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md">Networking Shell Standard</a>.</p>
+
+<h3 id="the-auto-discovery-process">The Auto-discovery process</h3>
+
+<p>Auto-discovery is triggered when creating resources for Shells that support it. When the administrator creates a resource in CloudShell Portal, CloudShell prompts the administrator to fill out mandatory attributes and then launches the Auto-discovery process, querying the physical device and describing its internal structure and attributes to CloudShell.</p>
+
+<p><strong>To implement the Auto-discovery process in a Shell:</strong></p>
+
+<ol>
+  <li>Enable Auto-discovery in the shell-definition.yaml file</li>
+  <li>Add mandatory attributes to the Auto-discovery process</li>
+  <li>Implement the get_inventory function</li>
+  <li>Add validations</li>
+  <li>To test your code, create a resource with the template</li>
+</ol>
+
+<h4 id="enable-auto-discovery-in-the-shell-definitionyaml-file">Enable Auto-discovery in the shell-definition.yaml file</h4>
+<p>In the context of this example, we’ll create a new Switch type resource based on the
+<a href="https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/networking_standard.md">Networking Shell Standard</a>.</p>
+
+<p><strong>To create a new Shell project:</strong></p>
+<ul>
+  <li>Run the following command in your Command Line:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">shellfoundry new implementing-discovery --template=gen2/networking/switch
+cd implementing_discovery</code></pre></figure>
+
+<p>The <em>shell-definition.yaml</em> file includes a basic Auto-discovery template.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">vendor.ImplementingDiscovery:
+  derived_from: cloudshell.nodes.Switch
+  capabilities:
+    auto_discovery_capability:
+      type: cloudshell.capabilities.AutoDiscovery
+      properties:
+        enable_auto_discovery:
+          type: boolean
+          default: true
+        auto_discovery_description:
+          type: string
+          default: Describe the auto discovery
+        inventory_description:
+          type: string
+          default: Describe the resource shell template</code></pre></figure>
+
+<p>The Auto-discovery process is described as a TOSCA capability with several properties.</p>
+<ul>
+  <li><strong>enable_auto_discovery</strong> - This property defines whether the Auto-discovery process is automatically triggered when creating a new resource.</li>
+  <li><strong>auto_discovery_description</strong> - This description is presented to the user before the Auto-discovery process begins.</li>
+  <li><strong>inventory_description</strong> - This is the description of the Shell template. It is presented to the user when creating a new resource.</li>
+</ul>
+
+<h4 id="add-mandatory-attributes-to-the-auto-discovery-process">Add mandatory attributes to the Auto-discovery process</h4>
+<p>In many Auto-discovery implementations, we need to ask the administrator for information before communicating with the physical device, for example, to provide the administrator’s credentials. If we add custom attributes to the Auto-discovery definition of the Shell, CloudShell will prompt the administrator to fill out these attributes before running the discovery. This ensures that the information will be available for the discovery process to use.</p>
+
+<p>In the context of this example, we’ll add 3 properties to the Auto-discovery process: <em>User</em>, <em>Password</em> and <em>my_custom_attribute</em>.</p>
+
+<p>The <em>User</em> and <em>Password</em> attributes are defined in the standard, so we only need to add them to the <em>auto_discovery_capability</em> section. However, <em>my_custom_attribute</em> is a specific attribute that we want to add to this Shell, so we need to add the attribute to both the properties section and the <em>auto_discovery_capability</em> section.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">vendor.ImplementingDiscovery:
+  derived_from: cloudshell.nodes.Switch
+  properties:
+    my_custom_attribute:
+      type: string          # optional values: string, integer, float, boolean, cloudshell.datatypes.Password
+  capabilities:
+    auto_discovery_capability:
+      type: cloudshell.capabilities.AutoDiscovery
+      properties:
+        enable_auto_discovery:
+          type: boolean
+          default: true
+        auto_discovery_description:
+          type: string
+          default: Describe the auto discovery
+        inventory_description:
+          type: string
+          default: Describe the resource shell template
+        User:
+          type: string
+        Password:
+          type: cloudshell.datatypes.Password
+        my_custom_attribute:
+          type: string</code></pre></figure>
+
+<h4 id="implement-the-get_inventory-function">Implement the get_inventory function</h4>
+
+<p>The goal of the <em>get_inventory</em> function in the Shell’s driver is to query the device and return a list of sub-resources and attribute values back to CloudShell.
+After querying the device, the function should return a specific result to CloudShell to allow creating the right resources.</p>
+
+<p><strong>To implement the get_inventory function:</strong></p>
+
+<ul>
+  <li>Run the <em>shellfoundry generate</em> command to generate the Shell’s data model.
+For more information about the Shell’s data model, see chapter <a href="/devguide/shells/generating-shell-data-model.html">Managing the Shell Data Model</a></li>
+</ul>
+
+<p>This is an example of the <em>get_inventory</em> implementation:</p>
+
+<div class="github-sample-reference">
+  <div class="author-info">
+    <a href="https://github.com/QualiSystems/devguide_examples/blob/master/2nd%20gen%20shells%20-%20implementing_discovery/src/driver.py">This Github Sample</a> is by <a href="https://github.com/QualiSystems">QualiSystems</a>
+  </div>
+  <div class="meta-info">
+    2nd%20gen%20shells%20-%20implementing_discovery/src/driver.py <a href="https://github.com/QualiSystems/devguide_examples/blob/master/2nd%20gen%20shells%20-%20implementing_discovery/src/driver.py">view</a> <a href="https://raw.githubusercontent.com/QualiSystems/devguide_examples/master/2nd%20gen%20shells%20-%20implementing_discovery/src/driver.py">raw</a>
+  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">def get_inventory(self, context):
+    &quot;&quot;&quot;
+    Discovers the resource structure and attributes.
+    :param AutoLoadCommandContext context: the context the command runs on
+    :return Attribute and sub-resource information for the Shell resource you can return an AutoLoadDetails object
+    :rtype: AutoLoadDetails
+    &quot;&quot;&quot;
+
+    resource = ImplementingDiscovery.create_from_context(context)
+    resource.vendor = &#39;specify the shell vendor&#39;
+    resource.model = &#39;specify the shell model&#39;
+
+    chassis1 = GenericChassis(&#39;Chassis 1&#39;)
+    chassis1.model = &#39;WS-X4232-GB-RJ&#39;
+    chassis1.serial_number = &#39;JAE053002JD&#39;
+    resource.add_sub_resource(&#39;1&#39;, chassis1)
+
+    module1 = GenericModule(&#39;Module 1&#39;)
+    module1.model = &#39;WS-X5561-GB-AB&#39;
+    module1.serial_number = &#39;TGA053972JD&#39;
+    chassis1.add_sub_resource(&#39;1&#39;, module1)
+
+    port1 = GenericPort(&#39;Port 1&#39;)
+    port1.mac_address = &#39;fe80::e10c:f055:f7f1:bb7t16&#39;
+    port1.ipv4_address = &#39;192.168.10.7&#39;
+    module1.add_sub_resource(&#39;1&#39;, port1)
+
+    return resource.create_autoload_details()</code></pre></figure>
+
+<p>This <em>get_inventory</em> code creates an instance of the root resource by calling the <em>create_from_context</em> function. Then, it assigns attribute values and creates a hierarchy of sub-resources.</p>
+
+<p>Note that we’re only returning information about sub-resources. The root resource already exists at this stage and already has the mandatory attributes defined by the template.</p>
+
+<p>This sample creates <em>GenericChassis</em>, <em>GenericModule</em> and <em>GenericPort</em> resource models and uses the <em>add_sub_resource</em> function to build the resource hierarchy.</p>
+
+<p><strong>To create the port:</strong></p>
+
+<p>1) Create a new <em>GenericPort</em> instance.</p>
+
+<p>2) Provide a unique name for the port.</p>
+
+<p>3) Add it as a sub resource of a specific module:
+  a.	Call the <em>add_sub_resource</em> function on the module.
+  b.	Provide both the <em>relative_address</em> of the port and the instance that represents the port.</p>
+
+<p>To return the information back to CloudShell, we need to use a specific data structure that represents the result of the discovery. The data structure is created automatically by calling the <em>create_autoload_details()</em> function.</p>
+
+<h4 id="add-validations">Add validations</h4>
+
+<p>A common enhancement for discovery functions that greatly improves the usability of the Auto-discovery process is to validate the information provided by the administrator. For example, trying to log in with the address and credentials and reporting back any error, or checking the text for illegal characters.</p>
+
+<p>Any exceptions raised in the <em>get_inventory</em> flow will display an error message to help the administrator correct their input and try again</p>
+
+<h4 id="create-a-resource-with-the-template">Create a resource with the template</h4>
+
+<p>To test the code, let’s create a resource based on the Shell template.</p>
+
+<p><strong>To create a resource with the template:</strong></p>
+
+<p>1) Import the Shell template using ShellFoundry.</p>
+
+<p>2) Open CloudShell Portal’s <strong>Inventory</strong> dashboard and click the <strong>Add New</strong> button.
+A dialog box is displayed, prompting you to select the template and enter a resource name.</p>
+
+<p>3) Select the <strong>ImplementingDiscovery</strong> template, enter a name for the resource, and click <strong>Create</strong>.</p>
+
+<p>The <strong>Resource</strong> dialog box is displayed.</p>
+
+<p><img src="/devguide/assets/discovery_page.png" alt="Discovery Dialog" class="img-responsive" /></p>
+
+<p>4) Enter the <strong>Username</strong> and <strong>Password</strong> and click <strong>Start discovery</strong>.
+The <em>get_inventory</em> function creates the entire device structure and a system message pops up to indicate the discovery process completed successfully.</p>
+
+<p>5) To validate, enter the name of the new resource in the <strong>Inventory</strong> search field.
+You should see a list of sub-resources with the discovered attributes:</p>
+
+<p><img src="/devguide/assets/inventory_search.png" alt="Discovery Dialog" class="img-responsive" /></p>
+
+
+
+
+
+
+
+
+    <div id="post-nav" class="clearfix">
+        
+            <a class="prev" href="/devguide/shells/driver-deep-dive.html">&laquo; Driver Deep Dive</a>
+        
+        
+            <a class="next" href="/devguide/shells/discovering-inventory-snmp.html">Discovering Inventory using SNMP &raquo;</a>
+        
+    </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        var disqus_identifier = '_shells/implementing-discovery-for-inventory-shells.md';
+        var disqus_url = 'https://qualisystems.github.io/shells/implementing-discovery-for-inventory-shells.html';
+        this.page.url = "https://qualisystems.github.io/devguide/shells/implementing-discovery-for-inventory-shells.html";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = disqus_identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//qualidev.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+<ul >
+    
+</ul>
+
+
+<script src="/devguide/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $('#search-query').lunrSearch({
+      indexUrl  : '/devguide/js/index.json',           // url for the .json file containing search index data
+      results   : '#search-results',          // selector for containing search results element
+      template  : '#search-results-template', // selector for Mustache.js template
+      titleMsg  : '',   // message attached in front of results (can be empty)
+      emptyMsg  : '<p>Nothing found.</p>'     // shown message if search returns no results
+    });
+  });
+</script>
+
+<script>
+$(function() {
+    page = $(".page-header").attr("data-page-id")
+    nav_item = $(".nav li[data-page-id='"+page+"']")
+    if (nav_item) {
+        $(".nav").find(".active").removeClass("active");
+        nav_item.addClass("active");
+    }
+})
+</script>
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    Documentation for <a href="http://www.quali.com">CloudShell Developer Guide</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="/devguide/js/prism.js"></script>
+
+        
+        <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-81468206-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+        
+    </body>
+</html>
