@@ -1,0 +1,1 @@
+Sitemap: https://devguide.quali.com/sitemap.xml

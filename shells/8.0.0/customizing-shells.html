@@ -1,0 +1,3798 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="search" type="application/opensearchdescription+xml" title="CloudShell DevGuide" href="/opensearch.xml" />
+        <title>CloudShell Developer Guide : Customizing Shells</title>
+        <meta name="description" content="">
+        <link rel="shortcut icon" type="image/png" href="/favicon.png?">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/prism.css">
+        <link rel="stylesheet" href="/css/QualiStyle.css">
+        <link rel="stylesheet" href="/css/samples.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/test-hot-block.webflow.css">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <script src="/js/jquery-3.1.0.min.js"></script>
+        <script src="/js/modernizr.js"></script>
+        <script src="/js/webflow.js"></script>
+        <script src="/js/version-redirect.js"></script>
+
+        
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+    <div class="col-md-3 col-sm-4">
+        <a class="brand" href="/">
+            <img alt="CloudShell Logo" src="/assets/logo.png" />
+            CloudShell <small>Developer Guide</small>
+        </a>
+    </div>
+    <div class="col-md-9 col-sm-8">
+        
+		  
+        <form class="search" action="/search/8.0.0/search.html">
+            <input class="input" id="search-query" type="text" name="q" placeholder="Search" />
+            <input class="button" type="submit" value="Search"></input>
+        </form>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row"> 
+            	
+                <!-- <div class="col-md-3"><span> Sveta </span></div> -->
+                               
+                
+                
+                    <div id="navigation" class="col-md-3 col-sm-4">
+                        <span><strong>CloudShell Version: </strong></span>
+                        <div id="versions">
+                            <div class="form-group" onchange="versionChange(this)">
+	<select class="form-control" id="version">
+   
+   	
+		
+	
+		  
+	  <option value="9.3.0">9.3.0</option>
+	
+	
+		  
+	  <option value="9.2.0">9.2.0</option>
+	
+	
+		  
+	  <option value="9.1.0">9.1.0</option>
+	
+	
+		  
+	  <option value="9.0.0">9.0.0</option>
+	
+	
+		  
+	  <option value="8.3.0">8.3.0</option>
+	
+	
+		  
+	  <option value="2020.1.0">2020.1.0</option>
+	
+	
+	</select>
+</div>
+                        </div>
+                        <ul class="nav nav-list" style="margin-top: -30px;">  
+     
+        
+           <li class="nav-header"></li>
+			  
+           
+           
+        
+           <li class="nav-header">Introduction</li>
+			  
+           
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_introduction/8.0.0/the-cloudshell-devguide.md" data-order="1"><a href="/introduction/8.0.0/the-cloudshell-devguide.html">The CloudShell DevGuide</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_introduction/8.0.0/setting-up-the-development-ide.md" data-order="2"><a href="/introduction/8.0.0/setting-up-the-development-ide.html">Setting up the Development Environment</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+        
+           <li class="nav-header">Extending cloudshell with shells</li>
+			  
+           
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/getting-started.md" data-order="1"><a href="/shells/8.0.0/getting-started.html">Getting Started</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/shell-driver-overview.md" data-order="2"><a href="/shells/8.0.0/shell-driver-overview.html">Shell Drivers Overview</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/the-shell-project.md" data-order="3"><a href="/shells/8.0.0/the-shell-project.html">The Shell Project Guide</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/modeling-the-shell.md" data-order="4"><a href="/shells/8.0.0/modeling-the-shell.html">Modeling Shells with TOSCA</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/generating-shell-data-model.md" data-order="5"><a href="/shells/8.0.0/generating-shell-data-model.html">Managing the Shell’s Data Model</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/getting-information-from-cloudshell.md" data-order="6"><a href="/shells/8.0.0/getting-information-from-cloudshell.html">Getting Information from CloudShell</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/customizing-driver-commands.md" data-order="7"><a href="/shells/8.0.0/customizing-driver-commands.html">Commands Visibility and Usability</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/driver-deep-dive.md" data-order="8"><a href="/shells/8.0.0/driver-deep-dive.html">Driver Deep Dive</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/implementing-discovery-for-inventory-shells.md" data-order="9"><a href="/shells/8.0.0/implementing-discovery-for-inventory-shells.html">Auto-discovery for Inventory Shells</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/discovering-inventory-snmp.md" data-order="10"><a href="/shells/8.0.0/discovering-inventory-snmp.html">Discovering Inventory using SNMP</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/debugging-shell-commands.md" data-order="11"><a href="/shells/8.0.0/debugging-shell-commands.html">Debugging Shell Driver Commands</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/deploying-to-production.md" data-order="12"><a href="/shells/8.0.0/deploying-to-production.html">Deploying to Production</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/customizing-shells.md" data-order="13"><a href="/shells/8.0.0/customizing-shells.html">Customizing Shells</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/common-driver-recipes.md" data-order="14"><a href="/shells/8.0.0/common-driver-recipes.html">Common Driver Recipes</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/tips-and-tricks.md" data-order="15"><a href="/shells/8.0.0/tips-and-tricks.html">Tips and Tricks</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_shells/8.0.0/1st-gen-shells.md" data-order="16"><a href="/shells/8.0.0/1st-gen-shells.html">1st Gen Shells</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+        
+           <li class="nav-header">Orchestration scripts</li>
+			  
+           
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_orchestration/8.0.0/getting-started.md" data-order="1"><a href="/orchestration/8.0.0/getting-started.html">Getting Started</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_orchestration/8.0.0/getting-information-from-cloudshell.md" data-order="2"><a href="/orchestration/8.0.0/getting-information-from-cloudshell.html">Getting Information from CloudShell</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_orchestration/8.0.0/script-commands-customization.md" data-order="6"><a href="/orchestration/8.0.0/script-commands-customization.html">Script commands Visibility and Usability</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_orchestration/8.0.0/scripts-deep-dive.md" data-order="6"><a href="/orchestration/8.0.0/scripts-deep-dive.html">Scripts Deep Dive</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_orchestration/8.0.0/common-orchestration-recipes.md" data-order="9"><a href="/orchestration/8.0.0/common-orchestration-recipes.html">Common Orchestration Script Recipes</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_orchestration/8.0.0/the-oob-orchestration.md" data-order="9"><a href="/orchestration/8.0.0/the-oob-orchestration.html">CloudShell's OOB Orchestration</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+        
+           <li class="nav-header">Configuration management</li>
+			  
+           
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-overview.md" data-order="1"><a href="/configmanagement/8.0.0/cf-overview.html">Overview</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-custom-scripts.md" data-order="2"><a href="/configmanagement/8.0.0/cf-custom-scripts.html">Custom Scripts</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-add-custom-script-to-app.md" data-order="3"><a href="/configmanagement/8.0.0/cf-add-custom-script-to-app.html">Adding Your Script to an App</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-custom-scripts-tips-and-tricks.md" data-order="4"><a href="/configmanagement/8.0.0/cf-custom-scripts-tips-and-tricks.html">Tips and Tricks for Custom Scripts</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-ansible.md" data-order="5"><a href="/configmanagement/8.0.0/cf-ansible.html">Ansible</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-ansible-examples.md" data-order="6"><a href="/configmanagement/8.0.0/cf-ansible-examples.html">Ansible Playbook Examples</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-add-playbook-to-app.md" data-order="7"><a href="/configmanagement/8.0.0/cf-add-playbook-to-app.html">Adding the Playbook to an App</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_configmanagement/8.0.0/cf-ansible-tips-and-tricks.md" data-order="8"><a href="/configmanagement/8.0.0/cf-ansible-tips-and-tricks.html">Tips and Tricks for Ansible Playbooks</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+        
+           <li class="nav-header">Extending cloudshell with cloud providers</li>
+			  
+           
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_cloudproviders/8.0.0/overview.md" data-order="1"><a href="/cloudproviders/8.0.0/overview.html">Custom Cloud Provider Overview</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+        
+           <li class="nav-header">Cloudshell apis</li>
+			  
+           
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_devops/8.0.0/available-apis.md" data-order="1"><a href="/devops/8.0.0/available-apis.html">Available CloudShell APIs</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_devops/8.0.0/devops-integration.md" data-order="2"><a href="/devops/8.0.0/devops-integration.html">Automating CloudShell Sandboxes for DevOps</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+        
+           <li class="nav-header">Reference</li>
+			  
+           
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/python-coding-standards.md" data-order="7"><a href="/reference/8.0.0/python-coding-standards.html">Python Coding Standards</a></li>
+						
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/shellfoundry-intro.md" data-order="8"><a href="/reference/8.0.0/shellfoundry-intro.html">Shellfoundry</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/quali-shell-framework.md" data-order="9"><a href="/reference/8.0.0/quali-shell-framework.html">Quali’s Shell Framework (Python 2)</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/migrating_1st_gen_shells.md" data-order="10"><a href="/reference/8.0.0/migrating_1st_gen_shells.html">Converting 1st Gen Shells into 2nd Gen Shells</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/associating-service-categories.md" data-order="11"><a href="/reference/8.0.0/associating-service-categories.html">Associating Categories to 1st Gen Service Shells</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/L1-switch-shell.md" data-order="12"><a href="/reference/8.0.0/L1-switch-shell.html">Creating an L1 Switch Shell</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/short-dev-videos.md" data-order="13"><a href="/reference/8.0.0/short-dev-videos.html">Short Development Videos</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+                       <li data-page-id="_reference/8.0.0/resource_scripts.md" data-order="14"><a href="/reference/8.0.0/resource_scripts.html">Using Resource Scripts</a></li>
+						
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+               
+			      
+					               
+               	
+					
+           
+        
+</ul>
+
+                    </div>
+
+                    <div id="content" class="col-md-9 col-sm-8">
+                        
+
+<div class="page-header" data-page-id="_shells/8.0.0/customizing-shells.md">
+    <h2>Customizing Shells
+        
+        
+          
+        
+    </h2>
+</div>
+
+
+<p>In this section, we’ll learn how to create and modify a shell’s commands and attributes.</p>
+
+<p>This article addresses two flows:</p>
+
+<ul>
+  <li>Modifying an existing shell</li>
+  <li>Creating a new shell with modifications to the standard</li>
+</ul>
+
+<p><em>At the end of this article, you can find an end-to-end example of how to extend an existing shell with attributes and commands. To see the example, click <a href="#end-to-end-example">here</a>.</em></p>
+
+<p>Modifying an existing shell is done using the <code>shellfoundry extend</code> command. This command downloads the source code of the shell you wish to modify to your local machine and updates the shell’s Author. Note that extending official shells (shells that were released by Quali) will remove their official tag. Keep in mind that modifying a shell that is being used in CloudShell may affect any inventory resources that are based on a previous version of the shell. In the second flow, since we’re creating a new shell from the appropriate shell standard, we will use the <code>shellfoundry new</code> command and modify the shell’s settings.</p>
+
+<p>The common use cases for customizing a shell are:</p>
+
+<ul>
+  <li>Adding new commands</li>
+  <li>Modifying existing commands</li>
+  <li>Adding new attributes</li>
+  <li>Modifying existing attributes</li>
+  <li>Publishing attributes in a service shell</li>
+  <li>Associating categories to a service shell</li>
+</ul>
+
+<p><em>Please watch this video if you’re not sure whether to create a new shell or customize an existing shell:</em></p>
+
+<iframe width="854" height="480" src="https://www.youtube.com/embed/a8yEgOG7-bI?list=PLnWTXOESKY41iU_0InfWSkwYq7IDkv7pH" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="customizing-a-shells-commands">Customizing a shell’s commands</h2>
+
+<p>When customizing an official shell you can add new commands, and also modify or hide existing ones.</p>
+
+<ul>
+  <li><strong>To add a new command:</strong> Add the command in the shell’s driver.py file, and expose the command in the shell’s <em>drivermetadata.xml</em> file.</li>
+</ul>
+
+<p>The command’s logic should be placed either in the driver itself or in a separate python package.</p>
+
+<p>Modifications to a command can include adding some logic either before or after the command or changing the command logic itself. In order to do that, <strong>copy the command code</strong> from the original Quali python package to the shell driver or to the custom python package you created (<em>the command logic resides either in the vendor package or vendor-os package - for example in “cloudshell-cisco” or “cloudshell-cisco-ios”</em>).</p>
+
+<p>When modifying an existing command, you can add optional input parameters. Just make sure that the implementation is backwards compatible. Note that adding mandatory inputs or removing one of the original inputs is not supported. In these cases, it is recommended to create an additional command with a different name, instead of modifying an existing one.</p>
+
+<p>For example, in this customized <a href="https://github.com/QualiSystemsLab/Extended-Cisco-NXOS-Shell">Cisco NXOS shell</a>, we modified the commands that configure VLANs on multiple ports and port channels.</p>
+
+<p>It is also possible to hide or remove a command. Hiding a command is done by placing it in an “administrative” <a href="/shells/8.0.0/customizing-driver-commands.html">category</a> in the drivermetadata.xml. Note that removing a command might affect how the shell is used since CloudShell and/or some orchestration scripts might depend on the existing driver’s commands.</p>
+
+<p>When adding or modifying a command, you can leverage Quali’s shell framework to ease the development process. For details, see <a href="/reference/8.0.0/quali-shell-framework.html">Quali’s Shell Framework</a>.</p>
+
+<p>See some common command extension examples in <a href="/shells/8.0.0/common-driver-recipes.html">Common Driver Recipes</a>.<a name="attributes"></a></p>
+
+<p>Please check out the following instructional videos on how to develop basic driver commands:</p>
+
+<iframe width="30%" height="30%" src="https://www.youtube.com/embed/lj6t3t39zzE?list=PLnWTXOESKY41iU_0InfWSkwYq7IDkv7pH" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<iframe width="30%" height="30%" src="https://www.youtube.com/embed/L6G0WYI4S-M?list=PLnWTXOESKY41iU_0InfWSkwYq7IDkv7pH" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<iframe width="30%" height="30%" src="https://www.youtube.com/embed/Lt5BhmUZR1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="customizing-a-shells-attributes">Customizing a shell’s attributes</h2>
+
+<p>Modification applies to attributes that are defined in the shell’s standard. To find the attributes defined in the shell’s standard, see the <a href="https://github.com/QualiSystems/cloudshell-standards/tree/master/Documentation" target="_blank">documentation page</a> of your shell’s standard. For such attributes, you can modify the description, default values, possible values and rules.</p>
+
+<p><strong>Note:</strong> You cannot modify attributes <strong>type</strong>, <strong>name</strong>, and any attributes that are associated with the shell’s family as this will affect other shells that use this family. The family attributes are listed in the shell’s standard.</p>
+
+<iframe width="854" height="480" src="https://www.youtube.com/embed/qkYmdezOLhw?list=PLnWTXOESKY41iU_0InfWSkwYq7IDkv7pH" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h3 id="deployment-specific-vs-shell-specific-attributes">Deployment-specific vs. shell-specific attributes</h3>
+
+<p>CloudShell provides two ways to customize attributes, which differ depending on the attribute’s usage:</p>
+
+<ul>
+  <li><strong>Customizing an existing shell</strong>: Use this option when the attributes are related to a specific device but are not relevant to other shells. This is done by manually editing the shell’s <em>shell-definition.yaml</em> file.</li>
+  <li><strong>Associating custom attributes with a shell that is installed in CloudShell</strong>: Use this option when the additional attributes are deployment-related and relevant to multiple resources of different shells. For example, the Execution Server Selector attribute. <em>Starting with CloudShell version 8.3, this option applies both to the root model of the shell and to the shell’s sub-resource models, such as blades and ports.</em></li>
+</ul>
+
+<p>The second option of associating custom attributes with an already installed shell is done either via CloudShell Portal or by calling the <a href="/shells/8.0.0/deploying-to-production.html#SetCustomShellAttributeUsingAPI">SetCustomShellAttribute</a> API method. For additional information on this method, see <a href="/shells/8.0.0/deploying-to-production.html">Deploying to Production</a>.</p>
+
+<font color="red">Deleting a 2nd Gen shell’s default attributes (those that come with the standard) is not supported. It is also not possible to customize a 2nd Gen shell’s data model (families and models) and its structure, which is as defined in the shell standard the original shell is based on.</font>
+
+<h3 id="adding-or-modifying-attributes-in-a-shells-root-model">Adding or modifying attributes in a shell’s root model</h3>
+
+<p>This section explains how to add attributes to the shell’s root model and to specific models within the shell. To learn how to expose attributes that are required for the discovery of the resource (in the <strong>Inventory</strong> dashboard’s <strong>Resource</strong> discovery dialog box), see <a href="/shells/8.0.0/implementing-discovery-for-inventory-shells.html">Auto-discovery for Inventory Shells</a>.</p>
+
+<p><strong>To add/modify a shell’s attributes:</strong></p>
+
+<p>1) Open command-line.</p>
+
+<p>2) To customize a shell that resides on your local machine, make sure command-line is pointing to a different path from the original shell’s root folder.</p>
+
+<p>3) Run the appropriate command in command-line:</p>
+
+<p>     <strong>To modify a shell:</strong>
+     </p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">shellfoundry extend &lt;URL/path-to-shell&gt;</code></pre></figure>
+
+<p>     The path can be a URL to the Shell’s source code on <a href="https://community.quali.com/integrations">Quali Community’s Integrations</a> page or the filesystem path (prefixed by <code>local:./</code>) to the extracted source code folder.</p>
+
+<p>     <strong>To create a new shell based on a specific shell standard:</strong>
+     </p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">shellfoundry new &lt;Shell-name&gt; --template &lt;template&gt;</code></pre></figure>
+
+<p>4) In the shell’s download folder, open the <em>shell-definition.yaml</em> file in your preferred editor.</p>
+
+<p>5) Update the <code>template version</code>.</p>
+
+<p>6) Locate <code>node-types:</code>.</p>
+
+<p>7) Under the root level model, add the following lines:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">properties:
+  my_property:
+    type: string
+    default: fast
+    description: Some attribute description
+    constraints:
+      - valid_values: [fast, slow]
+    tags: [configuration, setting, search_filter, abstract_filter, include_in_insight, readonly_to_users, display_in_diagram, connection_attribute, read_only]</code></pre></figure>
+
+<p>8) Edit the values, as appropriate.</p>
+<ul>
+  <li><strong>properties</strong>: Header for the shell’s attributes. Needs to be added only once.</li>
+  <li><strong>property_name</strong>: (Relevant when adding an attribute) Replace <strong>my_property</strong> with the new attribute’s display name. For example: “My new attribute:”. <font color="green">Do not remove the colon (:) from the end of the line.</font></li>
+  <li><strong>type</strong>: (Relevant when adding an attribute) Type of attribute. Optional values: string, integer, float, boolean, cloudshell.datatypes.Password.</li>
+  <li><strong>default</strong>: Default value.</li>
+  <li><strong>description</strong>: Attribute’s description.</li>
+  <li><strong>constraints</strong> Permitted values.</li>
+  <li><strong>tags</strong>: Attribute rules. For details, see <a href="/shells/8.0.0/modeling-the-shell.html">Modeling Shells with TOSCA</a>. Note that for service shells, the only applicable rule is <strong>user_input</strong>. For details, see <a href="#publish_attributes">Publishing a service shell’s attributes</a>.</li>
+</ul>
+
+<p>9) Remove any unneeded lines.</p>
+
+<p>10) Save the file.</p>
+
+<p>11) In command-line, navigate to the shell’s root folder.</p>
+
+<p>12) Package the shell.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">shellfoundry pack</code></pre></figure>
+
+<p>13) Import the shell into CloudShell.</p>
+
+<p><strong>Important:</strong> If a previous version of the shell already exists in CloudShell, upgrade the existing shell with the new one in CloudShell Portal’s <strong>Shells</strong> management page. This capability is available for 2nd Gen shells.</p>
+
+<h2 id="customizing-a-service-shell">Customizing a service shell</h2>
+
+<p>Customizing a service shell’s commands is the same as for resource shells, while customizing attributes largely follows the same procedure. The only difference is in how you publish a service’s attribute and associate a service shell to service categories.<a name="publish_attributes"></a></p>
+
+<h3 id="publishing-a-service-shells-attributes">Publishing a service shell’s attributes</h3>
+
+<p>Publishing an attribute displays that attribute in the service’s settings dialog box when a CloudShell user adds or edits a service in a blueprint or sandbox diagram.</p>
+
+<p><strong>To publish a service shell’s attribute:</strong></p>
+
+<p>1) Add or modify an existing attribute as explained in the <a href="">Customizing a Shell’s attributes</a> section above.</p>
+
+<p>2) If you want the service’s attribute to be exposed in the blueprint and sandbox, replace the tags line with the following:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">tags: [user_input]</code></pre></figure>
+
+<p>3) Save the <em>shell-definition.yaml</em> file, package and import the shell into CloudShell.</p>
+
+<h3 id="associating-categories-to-a-service-shell">Associating categories to a service shell</h3>
+
+<p>This procedure explains how to add service categories to a 2nd Gen service Shell. Service categories appear in the services catalog and are used to expose services in specific domains in CloudShell. This is done by associating a service category, which is linked to specific domains, to a service shell.</p>
+
+<p><strong>To associate service categories to a service shell:</strong></p>
+
+<p>1) Open command-line.</p>
+
+<p>2) To customize a shell that resides on your local machine, make sure command-line is pointing to a different path from the original shell template’s root folder.</p>
+
+<p>3) Run the appropriate command in command-line:</p>
+
+<p>     <strong>To modify a shell:</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">shellfoundry extend &lt;URL/path-to-shell-template&gt;</code></pre></figure>
+
+<p>     The path can be a URL to the Shell’s source code on <a href="https://community.quali.com/integrations">Quali Community’s Integrations</a> page or the filesystem path (prefixed by <code>local:./</code>) to the extracted source code folder.</p>
+
+<p>     <strong>To create a new shell based on a specific shell standard:</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">shellfoundry new &lt;Shell-name&gt; --template &lt;template&gt;</code></pre></figure>
+
+<p>4) In the shell’s download folder, open the <code>shell-definition.yaml</code> file in your preferred editor.</p>
+
+<p>5) Update the template version.</p>
+
+<p>6) Under <code>node-types:</code>, locate <code>properties:</code>, and add the following lines underneath:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">Service Categories:
+  type: list
+  default: [My Category 1, My Category 2]</code></pre></figure>
+
+<p>     <strong>Note:</strong> The <code>properties:</code> line needs to be added only once, so do not add it if it already exists uncommented in the <em>shell-definition.yaml</em>.</p>
+
+<p>7) Specify the categories in the <code>default:</code> line (comma-separated list).</p>
+
+<p>     The shell’s categories will be added to the Global domain, even if CloudShell already includes categories with the same name in other domains.</p>
+
+<p>8) Package and import the shell into CloudShell.</p>
+
+<p>9) To make the service available in other domains, in CloudShell Portal’s <strong>Categories</strong> management page, add those domains to the service’s categories.
+<a name="end-to-end-example"></a></p>
+
+<h2 id="example-extending-a-shell-with-attributes-and-commands">Example: Extending a shell with attributes and commands</h2>
+
+<p>To help us understand the shell customization process, let’s add attributes and commands to a shell. To simulate this process, we’ve created a modified version of the Cisco IOS Router Shell, which creates a mock resource structure of 16 ports. Please feel free to use it.</p>
+
+<p>Start by extending the shell. From the <a href="https://github.com/QualiSystemsLab/CiscoIOSRouter2GWithAutoload/releases" target="_blank">CiscoIOSRouter2GWithAutoload</a> shell’s GitHub <strong>Releases</strong> page, copy the source code link address of the latest release. Then, run <code>shellfoundry extend</code>.</p>
+
+<p>For example:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">shellfoundry extend https://github.com/QualiSystemsLab/CiscoIOSRouter2GWithAutoload/archive/1.0.zip</code></pre></figure>
+
+<p>The shell project is created in the directory from which you ran the command.</p>
+
+<p><img src="/assets/customizing-shells-shell-project.png" alt="Context Object" /></p>
+
+<p>When you extend a shell, it’s recommended to change the shell’s version and author. This is done in the shell project’s <em>shell-definition.yaml</em> file.</p>
+
+<p>For example:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">metadata:
+  template_name: Cisco IOS Router Shell 2G
+  template_author: steven
+  template_version: 1.0.1</code></pre></figure>
+
+<p>To see how it looks in CloudShell Portal, navigate to the shell’s root folder in command-line and install the shell.</p>
+
+<p>For example:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">cd &quot;c:\My Shells\CiscoIOSRouter2GWithAutoload&quot;
+shellfoundry install</code></pre></figure>
+
+<p>In the <strong>Shells</strong> page, we can see the shell’s updated author and version.</p>
+
+<p><img src="/assets/customizing-shells-metadata.png" alt="Context Object" /></p>
+
+<p>You can also change the image. To do so, add the image file to the shell project’s root folder and in the <code>artifacts</code> section of the <em>shell-definition.yaml</em>, set the file name.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">artifacts:
+  icon:
+    file: shell-icon.png
+    type: tosca.artifacts.File
+  driver:
+    file: CustomDataModelDriver.zip
+    type: tosca.artifacts.File</code></pre></figure>
+
+<p>And set it in the <code>metadata</code> section.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">metadata:
+  template_name: CustomDataModel
+  template_author: steven
+  template_version: 0.1.1
+  template_icon: shell-icon.png</code></pre></figure>
+
+<p>To see the image, install the updated shell.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">shellfoundry install</code></pre></figure>
+
+<p>And in the <strong>Inventory</strong> dashboard, create a resource based on the shell (if you’re using our modified shell, you don’t need to specify the credentials of a real Cisco IOS router) and add the resource to a blueprint.</p>
+
+<p>The image should be displayed on the resource.</p>
+
+<p><img src="/assets/customizing-shells-image.png" alt="Context Object" /></p>
+
+<p>Next, create an attribute on the root model of the resource. Attributes are created in the <code>properties</code> section of the <em>shell-definition.yaml</em>. We’ll add a string attribute called “my attribute” with a default value and some rules.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">node_types:
+
+  vendor.Cisco IOS Router 2G:
+    derived_from: cloudshell.nodes.Router
+    properties:
+      my attribute:
+        type: string
+        default: value 1
+        description: This is my new attribute.
+        constraints:
+          - valid_values: [value 1, value 2, value 3]
+        tags: [setting, configuration]</code></pre></figure>
+
+<p>The attribute is added to resources created from this shell. To see the attribute on our resource, install the shell on CloudShell, return to the blueprint and open the resource’s <strong>Resource Attributes</strong> pane.</p>
+
+<p><img src="/assets/customizing-shells-root-attribute.png" alt="Context Object" /></p>
+
+<p>Let’s say you want to create an attribute on the shell’s port. Starting with CloudShell 8.3, this capability is supported. Sub-model attributes are added the same way as root model attributes. The only difference is that for sub-model attributes, you need to include the sub-model before the property name (in our case, the sub-model is “Generic Port”). If the sub-model consists of several words, remove any spaces between them.</p>
+
+<p>For example, adding an attribute called “my port speed” to the Generic Port sub-model:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">node_types:
+
+  vendor.Cisco IOS Router 2G:
+    derived_from: cloudshell.nodes.Router
+    properties:
+      GenericPort.my port speed:
+        type: string
+        default: 5 GHz
+        description:
+        constraints:
+          - valid_values: [5 GHz, 10 GHz, 15 GHz]
+        tags: [setting, configuration]
+      my attribute:
+        type: string
+        default: value 1
+        description: This is my new attribute.
+        constraints:
+          - valid_values: [value 1, value 2, value 3]
+        tags: [setting, configuration]</code></pre></figure>
+
+<p>To see the new attribute, in the <strong>Inventory</strong> dashboard, find the resource’s ports (you can use the search field), click a port’s “more info” button and in the window that pops up, scroll down until you see the attribute.</p>
+
+<p><img src="/assets/customizing-shells-submodel-attribute.png" alt="Context Object" /></p>
+
+<p>You can also add attributes that are required for the resource’s discovery. While non-discovery attributes only need to be added to the <code>properties</code> section, new discovery attributes are added both to the <code>properties</code> section of the <em>shell-definition.yaml</em>, and to the <code>capabilities</code> section’s <code>properties</code>. We’ll add an attribute called “my discovery attribute”.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">capabilities:
+  concurrent_execution:
+    type: cloudshell.capabilities.SupportConcurrentCommands
+  auto_discovery_capability:
+    type: cloudshell.capabilities.AutoDiscovery
+    properties:
+      my discovery attribute:
+        type: boolean
+        default: true</code></pre></figure>
+
+<p>Let’s make sure the attribute was added to the shell. In the <strong>Inventory</strong> dashboard, select <strong>Discover</strong> from the resource’s more options menu. The attribute should be listed on the resource.</p>
+
+<p><img src="/assets/customizing-shells-discover-params.png" alt="Context Object" /></p>
+
+<p>Note that if we’re adding a discovery attribute that is already included in the shell’s standard, we only need to define it in the <code>capabilities</code> section.</p>
+
+<p>Now let’s add a simple command that prints “hello world” to the <strong>Output</strong> console. In the <em>driver.py</em> file, add the command.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">def hello_world(self):
+    return &quot;hello world&quot;
+    pass</code></pre></figure>
+
+<p>In the <em>drivermetadata.xml</em> file, add a category for the command and a display name. You need to do this if you want to expose the command in CloudShell Portal.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">&lt;Category Name=&quot;My Commands&quot;&gt;
+    &lt;Command Description=&quot;&quot; DisplayName=&quot;Hello World&quot; Name=&quot;hello_world&quot; /&gt;
+&lt;/Category&gt;</code></pre></figure>
+
+<p>In a CloudShell sandbox, hover over the resource and click <strong>Commmands</strong>. The command is displayed in the resource’s commands pane.</p>
+
+<p><img src="/assets/customizing-shells-sandbox-command.png" alt="Context Object" /></p>
+
+<p>And running the command prints the message to the <strong>Output</strong> window.</p>
+
+<p><img src="/assets/customizing-shells-output.png" alt="Context Object" /></p>
+
+<p>So far in this example, we discussed how to create attributes that are specific to the shell. However, CloudShell also includes global attributes that are not isolated to a specific shell and can be used among different CloudShell elements. You can add these global attributes to shells that are already installed on CloudShell using the <code>SetCustomShellAttribute</code> API method which connects to CloudShell, searches for the shell by name, and adds the attribute to it.</p>
+
+<p>For example, this script adds the <strong>Execution Server Selector</strong> attribute (with a default value) to our shell:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">import cloudshell.api.cloudshell_api as api
+
+username = &#39;admin&#39;
+password = &#39;admin&#39;
+server = &#39;192.168.85.9&#39;
+domain = &#39;Global&#39;
+
+session = api.CloudShellAPISession(
+    username=username,
+    password=password,
+    domain=domain,
+    host=server
+)
+
+session.SetCustomShellAttribute(
+    modelName=&#39;Cisco IOS Router 2G&#39;,
+    attributeName=&#39;Execution Server Selector&#39;,
+    defaultValue=&#39;NY Test&#39;
+)</code></pre></figure>
+
+<p>After shell installation, the attribute is added to the shell’s resources.</p>
+
+<p><img src="/assets/customizing-shells-SetCustomShellAttribute.png" alt="Context Object" /></p>
+
+
+
+
+
+
+
+
+    <div id="post-nav" class="clearfix">
+        
+            <a class="prev" href="/shells/8.0.0/deploying-to-production.html">&laquo; Deploying to Production</a>
+        
+        
+            <a class="next" href="/shells/8.0.0/common-driver-recipes.html">Common Driver Recipes &raquo;</a>
+        
+    </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        var disqus_identifier = '_shells/8.0.0/customizing-shells.md';
+        var disqus_url = 'https://devguide.quali.com/shells/8.0.0/customizing-shells.html';
+        this.page.url = "https://devguide.quali.com/shells/8.0.0/customizing-shells.html";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = disqus_identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//qualidev.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+<ul >
+    
+</ul>
+
+
+<script src="/js/search.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $('#search-query').lunrSearch({
+      indexUrl  : '/js/index.json',           // url for the .json file containing search index data
+      results   : '#search-results',          // selector for containing search results element
+      template  : '#search-results-template', // selector for Mustache.js template
+      titleMsg  : '',   // message attached in front of results (can be empty)
+      emptyMsg  : '<p>Nothing found.</p>'     // shown message if search returns no results
+    });
+  });
+</script>
+
+<script>
+$(function() {
+    page = $(".page-header").attr("data-page-id")
+    nav_item = $(".nav li[data-page-id='"+page+"']")
+    if (nav_item) {
+        $(".nav").find(".active").removeClass("active");
+        nav_item.addClass("active");
+    }
+})
+</script>
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    
+<div class="qs-control-container scroll-enable">
+	<a href="https://github.com/QualiSystems/devguide_source/issues/new?title=New%20suggestion%20for%20/shells/8.0.0/customizing-shells.html" target="_blank" class="qs-btn-round qs-btn-mail" title="Send feedback">
+	</a>
+
+	<button class="qs-btn-round qs-btn-scroll-top tooltip tooltipstered">
+	</button>
+</div>
+
+
+Documentation for <a href="http://www.quali.com">CloudShell Developer Guide</a>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/prism.js"></script>
+        
+        <script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-81468206-1', 'auto');
+ ga('send', 'pageview');
+
+</script>
+
+        
+    </body>
+
+</html>
